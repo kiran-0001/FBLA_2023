@@ -216,16 +216,16 @@
     color: rgb(175, 174, 174);
 }
 .form-wrap .form .submit-btn{
-    padding:10px;
+    padding:12px;
     cursor: pointer;
     width: 270px;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 16px;
     margin-bottom: 15px;
     margin-right: 5px;
     background-color: rgb(4, 117, 215);
     color: rgb(247, 244, 244);
-    border-radius:20px;
+    border-radius:30px;
     border: none;
 }
 .form-wrap .form .submit-btn:hover{
@@ -238,11 +238,11 @@
     text-decoration: none;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     font-size: 12px;
     width: 228px;
     margin-left: 8px;
-    border-radius: 25px;
+    border-radius: 35px;
     transition: background-color 0.3s;
     transition: color 0.3s;
 }
