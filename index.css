@@ -1,0 +1,296 @@
+/*animated bg logic*/
+.circles {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.843);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+/* Page styles */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Comfortaa, sans-serif;
+}
+.generate-btns {
+    z-index: 300;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 20px;
+    margin-left: 46px;
+    margin-right: 46px;
+}
+.generate-btns button {
+    opacity: 0.95;
+    border-color: transparent;
+    background-color: rgb(255, 255, 255);
+    color:  rgb(4, 117, 215);
+    width: 49%;
+    padding: 18px;
+    border-radius: 30px;
+    transition: all 0.20s;
+}
+.generate-btns button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(28, 75, 140);
+}
+.main-wrap {
+  background: radial-gradient(circle,  rgb(4, 117, 215) 0%, rgb(40, 65, 110) 100%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-container {
+  z-index: 500;
+  margin-bottom:72px;
+  padding-top: 40px;
+  padding-bottom: 120px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 35px;
+  width: 80%;
+  height: 530px;
+  background: rgb(255, 255, 255);
+  opacity: 0.92;
+}
+.logo-wrap {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.imsa-logo {
+  flex-direction: column;
+  width: 250px;
+}
+.app-title {
+  font-size: 32px;
+  font-family: 'Proxima Nova';
+}
+.form-wrap {
+  margin-top: 35px;
+  margin-left: 20px;
+  display: flex;
+}
+.form-wrap label {
+    font-weight: 700;
+}
+.form-wrap .form input{
+    font-family: 'Proxima Nova';
+    width:250px;
+    margin: 6px 0px;
+    margin-bottom: 10px;
+    height:35px;
+    color:rgb(155, 152, 152);
+    padding-left: 10px;
+    padding-right: 9px;
+    border-radius: 20px;
+    border: 1px solid rgb(216, 215, 215);
+}
+.form-wrap .form select{
+    font-family: 'Proxima Nova';
+    width:270px;
+    margin: 6px 0px;
+    margin-bottom: 10px;
+    height:35px;
+    color:rgb(155, 152, 152);
+    padding-left: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(216, 215, 215);
+}
+.form-wrap .form input:focus{
+    border: 1px solid rgb(28, 75, 130);
+    outline: none;
+}
+.form-wrap .form input::placeholder{
+    color: rgb(175, 174, 174);
+}
+.form-wrap .form .submit-btn{
+    padding:10px;
+    cursor: pointer;
+    width: 270px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    background-color: rgb(4, 117, 215);
+    color: rgb(247, 244, 244);
+    border-radius:20px;
+    border: none;
+}
+.form-wrap .form .submit-btn:hover{
+    background-color: rgba(39, 39, 175, 0.938);
+    transition: all ease 0.25s;
+}
+.form-wrap .update-btn{
+    cursor: pointer;
+    background-color: rgb(4, 117, 215);
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 12px;
+    width: 228px;
+    margin-left: 8px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    transition: color 0.3s;
+}
+.form-wrap .form .update-btn:hover{
+    background-color: rgba(39, 39, 175, 0.938);
+    transition: all ease 0.25s;
+    
+}
+
+/* event tab logic */
+.events {
+    margin-left: 50px;
+    margin-bottom: 200px;
+    display: flex;
+}
+.tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  .tabs button {
+    font-size: 18px;
+    font-family: 'Proxima Nova';
+    margin-top: 22px;
+    margin-bottom: 20px;
+  }
+  .tabs input {
+    font-family: 'Proxima Nova';
+  }
+  
+  .tab-btn {
+    flex: 1;
+    color: rgb(4, 117, 215);
+    background-color: white;
+    border:rgb(28, 75, 140);
+    border-style: solid;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 30px;
+    transition: 0.3s;
+  }
+  .tab-btn.active {
+    background-color: rgb(28, 75, 140);
+    color: white;
+  }
+  .tab-content {
+    display: none;
+    margin-left: 20px;
+    padding: 20px 12px;
+    border-left: 1px solid #ccc;
+  }
+  
