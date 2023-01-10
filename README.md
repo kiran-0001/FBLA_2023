@@ -25,3 +25,6 @@ control types.
 + All data entry must be validated with appropriate
 user notification and error messages including
 the use of required fields.
+
+###Dependencies:
++ install node.js (node_modules)
