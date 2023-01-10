@@ -26,6 +26,6 @@ control types.
 user notification and error messages including
 the use of required fields.
 
-###Dependencies:
+###### Dependencies:
 1. Firebase
    - In Terminal: npm install
