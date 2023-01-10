@@ -40,6 +40,7 @@
     document.getElementById('totalEntryForm').reset(); 
   }
 
+  //add entry to firebase db
   const saveEntry = (firstName, lastName, eventDate, studentGrade) => {
     var newEntry = entryFormDB.push();
     newEntry.set({
