@@ -252,7 +252,7 @@
     
 }
 
-/* event tab logic */
+/* event tab logic and radio styling*/
 .events {
     margin-left: 50px;
     margin-bottom: 200px;
@@ -271,7 +271,6 @@
   .tabs input {
     font-family: 'Proxima Nova';
   }
-  
   .tab-btn {
     flex: 1;
     color: rgb(4, 117, 215);
@@ -293,4 +292,3 @@
     padding: 20px 12px;
     border-left: 1px solid #ccc;
   }
-  
