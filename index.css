@@ -189,7 +189,7 @@
 /** prize display & help button **/
   .info {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 270px;
     left: 885px;
     right: 200px;
