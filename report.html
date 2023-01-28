@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+    <link rel="stylesheet" href="winners.css"/>
+</head>
+
+<body class="main">
+
+<div>
+    <p> Sophomore Reports:</p>
+    <ul id="sophReport">
+    </ul>
+
+    <hr>
+
+    <p> Junior Reports:</p>
+    <ul id="juniorReport">
+    </ul>
+
+    <hr>
+
+    <p> Senior Reports:</p>
+    <ul id="seniorReport">
+    </ul>
+
+    <hr>
+</div>
+
+<button class="button" onclick="retrieveSophomores(), retrieveJuniors(), retrieveSeniors()">Update Report </button>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="firebase.js"></script>
+
+</html>

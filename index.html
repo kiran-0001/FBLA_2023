@@ -1,130 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FBLAC&P</title>
-    <link rel="stylesheet" href="index.css" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>CampusConnect</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet"/>
+</head>
 
-    <!--fonts 'comfortaa', 'Proxima Nova 2'-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.cdnfonts.com/css/proxima-nova-2"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-        <!--animated bg-->
-        <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-        </ul>  
-
-    <div class="main-wrap">
-      <div class="box-container">
+<body>
+<div class="move_bg"></div>
+<div class="main-wrap">
+    <div class="box-container" style="visibility:visible">
         <div class="logo-wrap">
-          <img class="imsa-logo" src="images/IMSA_logo-01.jpg" alt="" />
-          <br />
-          <h1 class="app-title">Student Involvement Tracker</h1>
+            <img class="imsa-logo" src="images/IMSA_logo-01.jpg" alt=""/>
+            <br/>
+            <h1 class="app-title">CampusConnect</h1>
         </div>
         <div class="user-fields">
-        <div class="form-wrap">
-            <form action="" class="form" id="totalEntryForm">
-            <form action="" class="form" id="entryForm">
-                <label for="FirstName">First Name</label></br>
-                <input type="text" name="FirstName" id="FirstName" placeholder="Your first name" required> 
-                </br></br>
-                <label for="LastName">Last Name</label></br>
-                <input type="text" name="LastName" id="LastName" placeholder="Your last name" required>
-                </br></br>
-                <label for="start">Event Date</label><br>
-                <input type="date" id="date" name="event-date" value="2020-01-01" min="2020-01-01" max="2050-1-1" required>
-                </br></br>
-                <label for="cars">Grade level</label><br>
-                <select name="grades" id="grades" required>
-                    <option value="10th">10</option>
-                    <option value="11th">11</option>
-                    <option value="12th">12</option>
-                </select>
-                <br>
-                <button type="submit" class="submit-btn" onclick="submitSuccess()">Submit</button>
-                <br>
-                <span class="or-login">&#45or&#45</span>
-                
-                <button type="update" class="update-btn" onclick="updateSuccess()">Update Existing Entry</button>
-            </form> 
+            <div class="form-wrap">
+                <form class="form" id="totalEntryForm">
+                    <form action="" class="form" id="entryForm">
+                        <label for="FirstName">First Name</label></br>
+                        <input type="text" name="FirstName" id="FirstName" placeholder="Student First Name" required>
+                        </br></br>
 
-            <div class="events">
-                <div class="tabs">
-                    <button class="tab-btn active" onclick="openTab(event, 'section1')">Sporting Events</button>
-                    <button class="tab-btn" onclick="openTab(event, 'section2')">Other Events</button>
-                </div>
-                
-                <div id="section1" class="tab-content">
-                    <form id="sportingEvent">
-                    <p>Select Attended Event:</p>
-                    <br>
-                    <input type="radio" name="sportEvent" value="soccer"> Soccer<br>
-                    <br>
-                    <input type="radio" name="sportEvent" value="tennis"> Tennis<br>
-                    <br>
-                    <input type="radio" name="sportEvent" value="basketball"> Basketball<br>
-                    <br>
-                    <input type="radio" name="sportEvent" value="volleyball"> Volleyball<br>
-                    <br>
-                    <input type="radio" name="sportEvent" value="baseball"> Baseball<br>
-                    <br>
-                    <input type="radio" name="sportEvent" value="none" checked> None<br>
+                        <label for="LastName">Last Name</label></br>
+                        <input type="text" name="LastName" id="LastName" placeholder="Student Last Name" required>
+                        </br></br>
+
+                        <label for="studentID">Student ID #</label></br>
+                        <input type="text" name="studentID" id="studentID" placeholder="Student ID #" required>
+                        </br></br>
+
+                        <label for="date">Event Date</label><br>
+                        <input type="date" id="date" name="event-date" value="2023-01-01" min="2023-01-01"
+                               max="2025-1-1" required>
+                        </br></br>
+
+                        <label for="grades">Grade Level</label><br>
+                        <select name="grades" id="grades" required>
+                            <option value="10th">10</option>
+                            <option value="11th">11</option>
+                            <option value="12th">12</option>
+                        </select>
+
+                        <br>
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <br>
                     </form>
-                </div>
-                
-                <div id="section2" class="tab-content">
-                    <form id = "otherEvent">
-                    <p>Select Attended Event:</p>
-                    <br>
-                    <input type="radio" name="otherEvent" value="clubGA"> Club General Assembly<br>
-                    <br>
-                    <input type="radio" name="otherEvent" value="concert"> Band/Orchestra Concert<br>
-                    <br>
-                    <input type="radio" name="otherEvent" value="resLife"> Residential-Life Programming<br>
-                    <br>
-                    <input type="radio" name="otherEvent" value="culturalShow"> Cultural Show<br>
-                    <br>
-                    <input type="radio" name="otherEvent" value="fundraiser"> Fundraiser<br>
-                    <br>
-                    <input type="radio" name="otherEvent" value="none" checked> None<br>
-                    </form>
+
+                    <div class="events">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="openTab(event, 'section1')">Sporting Events</button>
+                            <button class="tab-btn" onclick="openTab(event, 'section2')">Other Events</button>
+                        </div>
+
+                        <div id="section1" class="tab-content">
+                            <form id="sportingEvent">
+                                <p>Select Attended Event:</p>
+                                <br>
+                                <input type="radio" name="sportEvent" value="soccer"> Soccer<br>
+                                <br>
+                                <input type="radio" name="sportEvent" value="tennis"> Tennis<br>
+                                <br>
+                                <input type="radio" name="sportEvent" value="basketball"> Basketball<br>
+                                <br>
+                                <input type="radio" name="sportEvent" value="volleyball"> Volleyball<br>
+                                <br>
+                                <input type="radio" name="sportEvent" value="baseball"> Baseball<br>
+                                <br>
+                                <input type="radio" name="sportEvent" value="none" checked> None<br>
+                            </form>
+                        </div>
+
+                        <div id="section2" class="tab-content">
+                            <form id="otherEvent">
+                                <p>Select Attended Event:</p>
+                                <br>
+                                <input type="radio" name="otherEvent" value="clubGA"> Club General Assembly<br>
+                                <br>
+                                <input type="radio" name="otherEvent" value="concert"> Band/Orchestra Concert<br>
+                                <br>
+                                <input type="radio" name="otherEvent" value="resLife"> Residential-Life Programming<br>
+                                <br>
+                                <input type="radio" name="otherEvent" value="culturalShow"> Cultural Show<br>
+                                <br>
+                                <input type="radio" name="otherEvent" value="fundraiser"> Fundraiser<br>
+                                <br>
+                                <input type="radio" name="otherEvent" value="none" checked> None<br>
+                            </form>
+                        </div>
+                     </div>
                 </form>
+                <div class="info">
+                    <b class="prizeTitle">Prizes</b>
+                    <br>
+                    <br>
+                    <li>Candy</li>
+                    <br>
+                    <br>
+                    <li>Red Friday Fest Tickets</li>
+                    <br>
+                    <br>
+                    <li>School Spirit Item</li>
+                    
+                    <div class="helpbtn"><img onclick="helpAlert()" src="images/helpIcon.png" width="40" height="40"></div>
                 </div>
             </div>
-        </div>          
         </div>
-      </div>
     </div>
+</div>
 
-    <div class="generate-btns">
-        <button class="generate-report">Quarterly Report</button>
-        <button class="generate-winners">Quarterly Winners</button>
-    </div>
+<div class="generate-btns">
+    <button class="generate-report" onclick="generateReport(), retrieveSophomores(), retrieveJuniors(), retrieveSeniors()">Generate Report</button>
 
-    <!-- firebase CDN(version can vary) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <button class="generate-winners" onclick="generateWinners()"> Generate Winners</button>
+</div>
 
-    <!--JS references-->
-    <script src="index.js"></script>
-    <script src="firebase.js"></script>
-  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="firebase.js"></script>
+<script src="index.js"></script>
+</body>
 </html>
