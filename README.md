@@ -1,4 +1,4 @@
-# FBLA_2023 Coding and Programming
+# FBLA_2023 Coding and Programming(Product: CampusConnect)
 
 ## Prompt:
 > Develop a program that will help improve student involvement at your school.
